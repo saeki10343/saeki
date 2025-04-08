@@ -1,0 +1,14 @@
+@reboot /usr/bin/config-pin P9.24 uart
+@reboot /usr/bin/config-pin P9.26 uart
+@reboot /usr/bin/config-pin P9.21 uart
+@reboot /usr/bin/config-pin P9.22 uart
+@reboot /bin/chmod 666 /dev/ttyO2 #権限をあげないとuartで認識しなかったりする
+#i2c2のピンはそのままでいけるけどi2c1は設定変えないとアドレスが認識されない
+@reboot /usr/bin/config-pin P9.17 i2c
+@reboot /usr/bin/config-pin P9.18 i2c
+
+*/1 * * * * /usr/bin/python3 /root/raspi-fiap/sht31.py
+*/1 * * * * /usr/bin/python3 /root/raspi-fiap/k30.py
+
+#以下のコマンドではなかった気もするけど定期的にキャッシュを消さないとログファイルのせいでアップロードできなくなる
+0 0 * * * /bin/echo 1 > /proc/sys/vm/drop_caches
