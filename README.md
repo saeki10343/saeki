@@ -26,6 +26,7 @@ BeagleBone Greenの計測制御ボードの開発
     - UART1 P9.24 & P9.26
     - UART2 P9.21 & P9.22
     - TXD, RXDのみ記載・3~5略
+参照：https://wiki.seeedstudio.com/BeagleBone_Green/
 
 # ピンの設定
 I2C1, UARTでは初期状態では認識されない場合があるためピン設定を行う
