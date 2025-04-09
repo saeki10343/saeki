@@ -1,5 +1,5 @@
 # 特別研究
-BeagleBone Greenの計測制御ボードの開発
+BeagleBone Greenの計測制御ボードの開発  
 基本的な接続方法は特別研究論文に記載されています
 
 # 使用機器・モジュール
@@ -25,7 +25,7 @@ BeagleBone Greenの計測制御ボードの開発
 ![Image](https://github.com/user-attachments/assets/9c072b58-f727-470a-a623-2a33974d212a)
     - UART1 P9.24 & P9.26
     - UART2 P9.21 & P9.22
-    - TXD, RXDのみ・3~5略
+    - TXD, RXDのみ記載・3~5略
 
 # ピンの設定
 I2C1, UARTでは初期状態では認識されない場合があるためピン設定を行う
